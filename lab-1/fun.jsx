@@ -25,4 +25,5 @@ function digitToWord(digit) {
   }
 }
 
-console.log(digitToWord(6));
+console.log(digitToWord(6)); 
+//2nd method 
