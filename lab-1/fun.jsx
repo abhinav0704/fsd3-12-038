@@ -27,3 +27,5 @@ function digitToWord(digit) {
 
 console.log(digitToWord(6)); 
 //2nd method 
+// frontend - flask, react, vue.js, angular, css, bootstrep, tailwind
+//backend- node.js, springboot, fastapi, dzango, php
