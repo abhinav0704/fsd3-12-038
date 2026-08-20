@@ -1,6 +1,8 @@
 import readline from "readline/promises";
 import { stdin, stdout } from "process";
 import { readFile, writeFile } from "fs/promises";
+import { get } from "http";
+import { count } from "console";
 
 const FILE = "product.json";
 
@@ -8,9 +10,20 @@ const getCart = async () => {
   const data = await readFile(FILE, "utf-8");
   return JSON.parse(data);
 };
-
 const saveCart = async (myCart) => {
   await writeFile(FILE, JSON.stringify(myCart, null, 2));
+};
+
+const updateCart = async (pid, value) => {
+  const data = await getCart();
+  const isFound = data.find((item) => item.id == pid);
+  if (isFound) {
+    isFound.qty += value;
+    await saveCart(data);
+    console.log("Product quantity updated sucessfully");
+  } else {
+    console.log("Product is not Found");
+  }
 };
 const addTocart = async (product) => {
   const myCart = await getCart();
@@ -25,15 +38,44 @@ const addTocart = async (product) => {
 };
 
 const ShowCart = async () => {
-  const myCart = await getCart();
-  console.table(myCart);
+  const data = await getCart();
+  console.table(data);
+  let total = data.reduce((t, item) => t + item.qty * item.price, 0);
+  // let total = 0;
+  // for (let i = 0; i < data.length; i++) {
+  //   total = total + data[i].qty * data[i].price;
+  // }
+  console.log("You have to pay bill: Rs.", total);
+};
+
+const removeFromCart = async (pid) => {
+  // const myCart = await getCart();
+  // const index = myCart.findIndex((item) => item.id === id);
+  // if (index !== -1) {
+  //   const removed = myCart.splice(index, 1);
+  //   await saveCart(myCart);
+  //   console.log(`Product with id ${id} removed from cart`);
+  // } else {
+  //   console.log(`Product with id ${id} not found in cart`);
+  // }
+  const data = await getCart();
+  const count = data.length;
+  const newData = data.filter((item) => item.id != pid);
+  const newCount = newData.length;
+
+  if (count == newCount) {
+    console.log("Pid not found");
+  } else {
+    await saveCart(newData);
+    console.log(`product with id ${pid} delete successfully`);
+  }
 };
 
 const main = async () => {
   let choice;
   const cin = readline.createInterface({ input: stdin, output: stdout });
   do {
-    console.log("Welcome to Flipkart 🛒🤷‍♂️😁");
+    console.log("Welcome to Flipkart 🛒");
     console.log("1.................Show Cart");
     console.log("2.................Add to Product");
     console.log("3.................Remove Product");
@@ -59,10 +101,15 @@ const main = async () => {
 
         break;
       case 3:
-        console.log("remove product");
+        let pid = await cin.question("Enter product id to remove: ");
+        await removeFromCart(Number(pid));
+
         break;
       case 4:
-        console.log("Update product quantity");
+        let pid2 = await cin.question("Enter product id to update:");
+        let value = await cin.question("+1 increaee,-1 decrease");
+        await updateCart(Number(pid), Number(value));
+
         break;
       case 5:
         console.log("See you later");
