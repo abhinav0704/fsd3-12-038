@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Product Enquiry</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: whitesmoke;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        .contact-container {
+            width: 500px;
+            max-width: 90%;
+            background-color: white;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px gray;
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .contact-container p {
+            text-align: center;
+            color: gray;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid gray;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 13px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tech Store</h1>
+        <p>Product Enquiry</p>
+    </header>
+
+    <div class="contact-container">
+
+        <h2>Contact Us</h2>
+        <p>Have a question about our products? Send us an enquiry.</p>
+
+        <form>
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number">
+
+            <label for="product">Select Product</label>
+            <select id="product" required>
+                <option value="">-- Select Product --</option>
+                <option value="lenovo-loq">Lenovo LOQ</option>
+                <option value="realme-12-plus">realme 12+ 5G</option>
+                <option value="ant-mouse">ANT Gaming Mouse</option>
+            </select>
+
+            <label for="message">Your Enquiry</label>
+            <textarea id="message"
+                placeholder="Write your product enquiry here..."
+                required></textarea>
+
+            <button type="submit">Submit Enquiry</button>
+
+        </form>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Tech Store | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
+```

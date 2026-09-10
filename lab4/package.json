@@ -1,18 +1,16 @@
 {
-  "name": "lab3",
+  "name": "lab4",
   "version": "1.0.0",
-  "description": "It is buile in Node.js",
-  "main": "prg1.js",
-  "type": "module",
+  "description": "",
+  "main": "prg7.js",
   "scripts": {
+    "start": "node app.js",
     "dev": "nodemon prg7.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^5.3.8"
-  },
+  "type": "module",
   "devDependencies": {
     "nodemon": "^3.1.14"
   }
