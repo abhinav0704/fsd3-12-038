@@ -14,3 +14,5 @@
 
     7.add node module in the gitignore
     8.to use npm run dev
+ ## RESR API
+ - majority backend servers
