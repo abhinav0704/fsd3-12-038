@@ -8,17 +8,22 @@ let users = [
   },
   {
     id: 2,
-    name: "Amey Yadav",
+    name: "Aditi",
     mob: "46885xxxxx",
-    email: "amey.example@gmail.com",
+    email: "aditi.example@gmail.com",
   },
 ];
 
 let nextId = 3;
 
 // Named export
-export function getUsers() {
-  return users;
-}
+export const getUsers = () =>
+ users;
+
+export const addUser = (user) => {
+  user.id = nextId++; // assign a new unique id
+  users.push(user); // add the user to the array
+  return user; // return the newly added user
+};
 
 // You can also export other functions later, like addUser, deleteUser, etc.
