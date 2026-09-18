@@ -16,7 +16,12 @@ function digitToWord(digit) {
       return "Six";
     case 7:
       return "Seven";
-
+    case 8:
+      return "Eight";
+    case 9:
+      return "Nine";
+    default:
+      return "Invalid digit";
   }
 }
 
