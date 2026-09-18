@@ -29,5 +29,5 @@ button.dispatchEvent("click", {
 
 button.removeEventListener("click", handleclick);
 button.dispatchEvent("click", {
-  target: "ResetBtn",
+  target: "ResetButton", //ResetBtn
 });
