@@ -4,13 +4,13 @@ let users = [
     id: 1,
     name: "Arpita",
     mob: "46545xxx81",
-    email: "arpita.example@gmail.com",
+    email: "arpita@gmail.com",
   },
   {
     id: 2,
     name: "Aditi",
     mob: "46885xx266",
-    email: "aditi.example@gmail.com",
+    email: "aditi@gmail.com",
   },
   {
     id: 3,
