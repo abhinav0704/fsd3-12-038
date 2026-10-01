@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Store</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: whitesmoke;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 8px;
+            color: lightgray;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            width: 300px;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px gray;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-image {
+            height: 180px;
+            background-color: lightgray;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: dimgray;
+            margin: 8px 0;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: green;
+            margin: 15px 0;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tech Store</h1>
+        <p>Latest Technology at Best Prices</p>
+    </header>
+
+    <section class="products">
+
+        <!-- Lenovo LOQ -->
+        <div class="card">
+            <div class="product-image">
+                💻
+            </div>
+
+            <h2>Lenovo LOQ</h2>
+
+            <p>Gaming Laptop</p>
+            <p>RTX Graphics • High Performance</p>
+            <p>Powerful Gaming Experience</p>
+
+            <div class="price">₹75,000</div>
+
+            <button>Buy Now</button>
+        </div>
+
+
+        <!-- Realme 12+ 5G -->
+        <div class="card">
+            <div class="product-image">
+                📱
+            </div>
+
+            <h2>realme 12+ 5G</h2>
+
+            <p>5G Smartphone</p>
+            <p>AMOLED Display • Powerful Camera</p>
+            <p>Fast Performance</p>
+
+            <div class="price">₹20,999</div>
+
+            <button>Buy Now</button>
+        </div>
+
+
+        <!-- ANT Mouse -->
+        <div class="card">
+            <div class="product-image">
+                🖱️
+            </div>
+
+            <h2>ANT Gaming Mouse</h2>
+
+            <p>Gaming Mouse</p>
+            <p>High DPI • RGB Lighting</p>
+            <p>Ergonomic Design</p>
+
+            <div class="price">₹999</div>
+
+            <button>Buy Now</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Tech Store | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
+```
