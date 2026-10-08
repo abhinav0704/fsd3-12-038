@@ -16,3 +16,9 @@ Step-7:update backend/package.json
     "start": "node app.js",
     "dev": "nodemon prg1.js"
   }
+ 
+
+ # static import
+  In xpress we can add any static html pages with the help of express.static method.
+  
+  Express support middleware, when we have to execute some function before server execution then we use middleware app.use always apply to insert any middleware.
